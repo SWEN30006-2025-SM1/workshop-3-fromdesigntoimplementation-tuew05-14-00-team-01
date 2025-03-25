@@ -11,7 +11,7 @@ public class SampleValidator implements SubmissionValidator{
     public ValidationError[] validateSubmission(Submission submission) {
         ArrayList<ValidationError> errors = new ArrayList<ValidationError>();
         // Loop through all files and create an error if there are any no pdfs
-        File[] files = submission.includedFiles();
+        ArrayList<File> files = submission.includedFiles();
         for(File f : files){
             String type = f.fileType();
             if(!type.equals("pdf")){
