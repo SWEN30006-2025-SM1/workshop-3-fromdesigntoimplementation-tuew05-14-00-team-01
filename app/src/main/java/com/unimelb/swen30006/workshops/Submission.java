@@ -16,8 +16,7 @@ public class Submission {
         this.note = note;
     }
 
-    // Return two fake files
-    public File[] includedFiles(){
+    public File[] includedFiles() {
         File[] files = new File[2];
         files[0] = new File();
         files[1] = new File();

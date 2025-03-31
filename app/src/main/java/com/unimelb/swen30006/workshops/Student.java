@@ -19,7 +19,6 @@ public class Student extends User {
         this.submissions = new HashMap<>();
     }
 
-
     /**
      * Submit an assignment.
      * @param id Assessment ID
@@ -28,6 +27,7 @@ public class Student extends User {
      * @return Receipt of submission
      */
     public Receipt submitAssignment(String id, File f, String note) {
+        // Find the AssessmentItem
         for (Subject subject : subjects) {
             AssessmentItem assessment = subject.findByID(id);
             if (assessment != null) {
